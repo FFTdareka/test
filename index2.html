@@ -6,10 +6,10 @@
 </head>
 <body>
   <h1>受信側</h1>
-  <p id="test"></p>
+  <p id="test">a</p>
   <script>
     window.addEventListener("message", (event) => {
-      if (event.origin !== 'https://fftdareka.github.io/test/index.html')
+      if (event.origin !== 'https://fftdareka.github.io/test/')
 	      return;
       let d = event.data;
       document.getElementById("test").innerText = d;
