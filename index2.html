@@ -10,7 +10,7 @@
   <script>
     window.addEventListener("message", (event) => {
       if (event.origin !== 'https://fftdareka.github.io/test/index.html')
-		    return;
+	      return;
       let d = event.data;
       document.getElementById("test").innerText = d;
     }) 
