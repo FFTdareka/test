@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test2</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>受信側</h1>
+  <p id="test"></p>
+  <script>
+    window.addEventListener("message", (event) => {
+      if (event.origin !== 'https://fftdareka.github.io/test/index.html')
+		    return;
+      let d = event.data;
+      document.getElementById("test").innerText = d;
+    }) 
+  </script>
+</body>
+</html>
