@@ -19,6 +19,12 @@
   <p>これはテストです。</p>
   <table border="1" cellspacing="0">
     <tr>
+      <td colspan="2" class="name"　height="50" width="600">全体</td>
+    </tr>
+    <tr>
+      <td id="all" colspan="2" class="people" height="150" width="300">0人</td>
+    </tr>
+    <tr>
       <td height="50" width="300" class="name">A</td><td width="300" class="name">B</td>
     </tr>
     <tr>
@@ -41,27 +47,43 @@
       if (e.key == 'a' && e.ctrlKey) {
         num = (Number(document.getElementById("a").innerText.replace("人", "")) + 1 ) + "人";
         document.getElementById("a").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) + 1 ) + "人";
+        document.getElementById("all").innerText = num;
       } else if (e.key == 'b' && e.ctrlKey) {
         num = (Number(document.getElementById("b").innerText.replace("人", "")) + 1 ) + "人";
         document.getElementById("b").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) + 1 ) + "人";
+        document.getElementById("all").innerText = num;
       } else if (e.key == 'c' && e.ctrlKey) {
         num = (Number(document.getElementById("c").innerText.replace("人", "")) + 1 ) + "人";
         document.getElementById("c").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) + 1 ) + "人";
+        document.getElementById("all").innerText = num;
       } else if (e.key == 'd' && e.ctrlKey) {
         num = (Number(document.getElementById("d").innerText.replace("人", "")) + 1 ) + "人";
         document.getElementById("d").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) + 1 ) + "人";
+        document.getElementById("all").innerText = num;
       } else if (e.key == 'a' && e.altKey) {
         num = (Number(document.getElementById("a").innerText.replace("人", "")) - 1 ) + "人";
         document.getElementById("a").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) - 1 ) + "人";
+        document.getElementById("all").innerText = num;
       } else if (e.key == 'b' && e.altKey) {
         num = (Number(document.getElementById("b").innerText.replace("人", "")) - 1 ) + "人";
         document.getElementById("b").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) - 1 ) + "人";
+        document.getElementById("all").innerText = num;
       } else if (e.key == 'c' && e.altKey) {
         num = (Number(document.getElementById("c").innerText.replace("人", "")) - 1 ) + "人";
         document.getElementById("c").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) - 1 ) + "人";
+        document.getElementById("all").innerText = num;
       } else if (e.key == 'd' && e.altKey) {
         num = (Number(document.getElementById("d").innerText.replace("人", "")) - 1 ) + "人";
         document.getElementById("d").innerText = num;
+        num = (Number(document.getElementById("all").innerText.replace("人", "")) - 1 ) + "人";
+        document.getElementById("all").innerText = num;
       }
     });
   </script>
