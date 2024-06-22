@@ -15,7 +15,7 @@
       text-align: center;
     }
     .minute{
-      font-size: 125px;
+      font-size: 120px;
       text-align: center;
     }
   </style>
@@ -153,14 +153,22 @@
         if (sbTime == 0) {
           sbTime = "1分未満";
         } else if (sbTime >= 1) {
-          sbTime = sbTime + "分程度";
+          if (~~(sbTime / 60) >= 1) {
+            sbTime = "1時間以上";
+          } else {
+            sbTime = sbTime + "分程度"; 
+          }
         }
       } else if (allPeople >= 16 && mode == "0") {
         sbTime = ~~((playSec / maxPeople) * (allPeople - 15) / 60);
         if (sbTime == 0) {
           sbTime = "1分未満";
         } else if (sbTime >= 1) {
-          sbTime = sbTime + "分程度";
+          if (~~(sbTime / 60) >= 1) {
+            sbTime = "1時間以上";
+          } else {
+            sbTime = sbTime + "分程度"; 
+          }
         }
       }
       return sbTime;
