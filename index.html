@@ -56,8 +56,8 @@
       let num2;
       let mode;
       if (e.key == 'a' && e.ctrlKey) {
-        num = Number(document.getElementById("a").innerText.replace("人", "")) + 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1
+        num = Number(document.getElementById("a").innerText.replace("人", "")) + 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("a").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -65,8 +65,8 @@
           document.getElementById("min").innerText = time(num2, mode);
         }
       } else if (e.key == 'b' && e.ctrlKey) {
-        num = Number(document.getElementById("b").innerText.replace("人", "")) + 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1
+        num = Number(document.getElementById("b").innerText.replace("人", "")) + 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("b").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -74,8 +74,8 @@
           document.getElementById("min").innerText = time(num2, mode);
         }
       } else if (e.key == 'c' && e.ctrlKey) {
-        num = Number(document.getElementById("c").innerText.replace("人", "")) + 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1
+        num = Number(document.getElementById("c").innerText.replace("人", "")) + 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("c").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -83,8 +83,8 @@
           document.getElementById("min").innerText = time(num2, mode);
         }
       } else if (e.key == 'd' && e.ctrlKey) {
-        num = Number(document.getElementById("d").innerText.replace("人", "")) + 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1
+        num = Number(document.getElementById("d").innerText.replace("人", "")) + 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) + 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("d").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -92,8 +92,8 @@
           document.getElementById("min").innerText = time(num2, mode);
         }
       } else if (e.key == 'a' && e.altKey) {
-        num = Number(document.getElementById("a").innerText.replace("人", "")) - 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1
+        num = Number(document.getElementById("a").innerText.replace("人", "")) - 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("a").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -101,8 +101,8 @@
           document.getElementById("min").innerText = time(num2, mode);
         }
       } else if (e.key == 'b' && e.altKey) {
-        num = Number(document.getElementById("b").innerText.replace("人", "")) - 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1
+        num = Number(document.getElementById("b").innerText.replace("人", "")) - 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("b").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -110,8 +110,8 @@
           document.getElementById("min").innerText = time(num2, mode);
         }
       } else if (e.key == 'c' && e.altKey) {
-        num = Number(document.getElementById("c").innerText.replace("人", "")) - 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1
+        num = Number(document.getElementById("c").innerText.replace("人", "")) - 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("c").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -119,8 +119,8 @@
           document.getElementById("min").innerText = time(num2, mode);
         }
       } else if (e.key == 'd' && e.altKey) {
-        num = Number(document.getElementById("d").innerText.replace("人", "")) - 1
-        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1
+        num = Number(document.getElementById("d").innerText.replace("人", "")) - 1;
+        num2 = Number(document.getElementById("all").innerText.replace("人", "")) - 1;
         if (num >= 0 && num2 >= 0) {
           document.getElementById("d").innerText = num + "人";
           document.getElementById("all").innerText = num2 + "人";
@@ -129,8 +129,14 @@
         }
       } else if (e.key == '!' && e.shiftKey) {
         document.getElementById("mode").innerText = "1";
+        num2 = Number(document.getElementById("all").innerText.replace("人", ""));
+        mode = document.getElementById("mode").innerText;
+        document.getElementById("min").innerText = time(num2, mode);
       } else if (e.key == '0' && e.shiftKey) {
         document.getElementById("mode").innerText = "0";
+        num2 = Number(document.getElementById("all").innerText.replace("人", ""));
+        mode = document.getElementById("mode").innerText;
+        document.getElementById("min").innerText = time(num2, mode);
       }
     });
 
@@ -143,7 +149,7 @@
       if (allPeople <= 15) {
         sbTime = "1分未満";
       } else if (allPeople >= 16 && mode == "1") {
-        sbTime = ~~(((playSec - maxPeople * resSec) * ~~((allPeople - 1) / maxPeople) + 15 * (allPeople % maxPeople)) / 60);
+        sbTime = ~~(((playSec - maxPeople * resSec) * ~~(allPeople / maxPeople) + 15 * (allPeople % maxPeople)) / 60);
         if (sbTime == 0) {
           sbTime = "1分未満";
         } else if (sbTime >= 1) {
