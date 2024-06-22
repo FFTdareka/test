@@ -9,16 +9,16 @@
   <p>これはテストです。</p>
   <table border="1" cellspacing="0">
     <tr>
-      <td height="80" width="200">A</td><td width="200">B</td>
+      <td height="50" width="300">A</td><td width="300">B</td>
     </tr>
     <tr>
-      <td id="a" height="100" width="200">0</td><td id="b" width="200">0</td>
+      <td id="a" height="150" width="300">0人</td><td id="b" width="300">0人</td>
     </tr>
     <tr>
-      <td height="80" width="200">C</td><td width="200">D</td>
+      <td height="50" width="300">C</td><td width="300">D</td>
     </tr>
     <tr>
-      <td id="c" height="100" width="200">0</td><td id="d" heigth="100" width="200">0</td>
+      <td id="c" height="150" width="300">0人</td><td id="d" heigth="100" width="300">0人</td>
     </tr>
   </table>
   <script>
@@ -29,16 +29,16 @@
       e.preventDefault();
       let num;
       if (e.key == 'a' && e.ctrlKey) {
-        num = Number(document.getElementById("a").innerText) + 1;
+        num = (Number(document.getElementById("a").innerText - "人") + 1 ) + "人";
         document.getElementById("a").innerText = num;
       } else if (e.key == 'b' && e.ctrlKey) {
-        num = Number(document.getElementById("b").innerText) + 1;
+        num = (Number(document.getElementById("b").innerText - "人") + 1 ) + "人";
         document.getElementById("b").innerText = num;
       } else if (e.key == 'c' && e.ctrlKey) {
-        num = Number(document.getElementById("c").innerText) + 1;
+        num = (Number(document.getElementById("c").innerText - "人") + 1 ) + "人";
         document.getElementById("c").innerText = num;
       } else if (e.key == 'd' && e.ctrlKey) {
-        num = Number(document.getElementById("d").innerText) + 1;
+        num = (Number(document.getElementById("d").innerText - "人") + 1 ) + "人";
         document.getElementById("d").innerText = num;
       }
     });
