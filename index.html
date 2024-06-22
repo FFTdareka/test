@@ -145,7 +145,7 @@
       if (allPeople <= 15) {
         sbTime = "1分未満";
       } else if (allPeople >= 16 && mode == "1") {
-        sbTime = ~~((playSec - maxPeople * resSec) * ~~((allPeople - 1) / maxPeople) + 15 * (allPeople % maxPeople) / 60);
+        sbTime = ~~(((playSec - maxPeople * resSec) * ~~((allPeople - 1) / maxPeople) + 15 * (allPeople % maxPeople)) / 60);
         if (sbTime == 0) {
           sbTime = "1分未満";
         } else if (sbTime >= 1) {
