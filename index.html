@@ -22,22 +22,25 @@
     </tr>
   </table>
   <script>
+    window.addEventListener("keydown", function(e){
+      e.preventDefault();
+    });
     window.addEventListener("keyup", function(e){
-    e.preventDefault();
-    let num;
-    if (e.key == 'a' && e.ctrlKey) {
-      num = Number(document.getElementById("a").innerText) + 1;
-      document.getElementById("a").innerText = num;
-    } else if (e.key == 'b' && e.ctrlKey) {
-      num = Number(document.getElementById("b").innerText) + 1;
-      document.getElementById("b").innerText = num;
-    } else if (e.key == 'c' && e.ctrlKey) {
-      num = Number(document.getElementById("c").innerText) + 1;
-      document.getElementById("c").innerText = num;
-    } else if (e.key == 'd' && e.ctrlKey) {
-      num = Number(document.getElementById("d").innerText) + 1;
-      document.getElementById("d").innerText = num;
-    }
+      e.preventDefault();
+      let num;
+      if (e.key == 'a' && e.ctrlKey) {
+        num = Number(document.getElementById("a").innerText) + 1;
+        document.getElementById("a").innerText = num;
+      } else if (e.key == 'b' && e.ctrlKey) {
+        num = Number(document.getElementById("b").innerText) + 1;
+        document.getElementById("b").innerText = num;
+      } else if (e.key == 'c' && e.ctrlKey) {
+        num = Number(document.getElementById("c").innerText) + 1;
+        document.getElementById("c").innerText = num;
+      } else if (e.key == 'd' && e.ctrlKey) {
+        num = Number(document.getElementById("d").innerText) + 1;
+        document.getElementById("d").innerText = num;
+      }
     });
   </script>
 </body>
