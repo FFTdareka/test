@@ -49,7 +49,7 @@
     <input type="text" id="name"　required /><br>
     <label for="getScore">getScore</label>
     <input type="text" id="getScore" required />
-    <button type="button" id="sendButton" onclick="window.alert('ok')" disabled>送信</button>
+    <button type="button" id="sendButton" disabled>送信</button>
     <script>
       function inputCheck() {
         let name = document.getElementById("name");
@@ -147,7 +147,7 @@
       
       name.oninput = inputCheck;
       getScore.oninput = inputCheck;
-      sendButton.oninput = createRank;
+      sendButton.onclick = createRank;
     </script>
   </body>
 </html>
