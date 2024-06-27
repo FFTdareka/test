@@ -51,16 +51,22 @@
     <input type="text" id="getScore" oninput="inputCheck" required />
     <button type="button" id="sendButton" onclick="" disabled>送信</button>
     <script>
+      let name = document.getElementById("name");
+      let nameV = name.value;
+      let getScore = document.getElementById("getScore");
+      let getScoreV = getScore.value;
+      let sendButton = docuement.getElementById("sendButton");
+      
       function inputCheck() {
-        let name = document.getElementById("name").value;
-        let getScore = document.getElementById("getScore").value;
-        let sendButton = docuement.getElementById("sendButton");
-        if (name && getScore) {
+        if (nameV && getScoreV) {
           sendButton.disabled = false;
         } else {
           sendButton.disabled = true;
         }
       }
+
+      name.oninput = inputCheck();
+      getScore.oninput = inputCheck();
     </script>
   </body>
 </html>
