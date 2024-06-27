@@ -21,28 +21,28 @@
     <table id="rank" border="0">
       <tr>
         <td class="rankNum">第1位</td>
-        <td class="pName"> </td>
-        <td class="score"> </td>
+        <td class="pName" id="firstName"> </td>
+        <td class="score" id="firstScore"> </td>
       </tr>
       <tr>
         <td class="rankNum">第2位</td>
-        <td class="pName"> </td>
-        <td class="score"> </td>
+        <td class="pName" id="secondName"> </td>
+        <td class="score" id="secondScore"> </td>
       </tr>
       <tr>
         <td class="rankNum">第3位</td>
-        <td class="pName"> </td>
-        <td class="score"> </td>
+        <td class="pName" id="thirdName"> </td>
+        <td class="score" id="thirdScore"> </td>
       </tr>
       <tr>
         <td class="rankNum">第4位</td>
-        <td class="pName"> </td>
-        <td class="score"> </td>
+        <td class="pName" id="fourthName"> </td>
+        <td class="score" id="fourthScore"> </td>
       </tr>
       <tr>
         <td class="rankNum">第5位</td>
-        <td class="pName"> </td>
-        <td class="score"> </td>
+        <td class="pName" id="fifthName"> </td>
+        <td class="score" id="fifthScore"> </td>
       </tr>
     </table>
     <label for="name">name</label>
@@ -51,10 +51,9 @@
     <input type="text" id="getScore" required />
     <button type="button" id="sendButton" onclick="window.alert('ok')" disabled>送信</button>
     <script>
-      let name = document.getElementById("name");
-      let getScore = document.getElementById("getScore");
-      
       function inputCheck() {
+        let name = document.getElementById("name");
+        let getScore = document.getElementById("getScore");
         let nameV = name.value;
         let getScoreV = getScore.value;
         let sendButton = document.getElementById("sendButton");
@@ -65,8 +64,89 @@
         }
       }
 
+      function createRank() {
+        let name = document.getElementById("name");
+        let getScore = document.getElementById("getScore");
+        let nameV = name.value;
+        let getScoreV = getScore.value;
+        let sendButton = document.getElementById("sendButton");
+        let firstName = document.getElementById("firstName");
+        let firstNameV = firstName.innerText;
+        let secondName = document.getElementById("secondName");
+        let secondNameV = secondName.innerText;
+        let thirdName = document.getElementById("thirdName");
+        let thirdNameV = thirdName.innerText;
+        let fourthName = document.getElementById("fourthName");
+        let fourthNameV = fourthName.innerText;
+        let fifthName = document.getElementById("fifthName");
+        let fifthNameV = fifthName.innerText;
+        let firstScore = document.getElementById("firstScore");
+        let firstScoreV = firstScore.innerText;
+        let secondScore = document.getElementById("secondScore");
+        let secondScoreV = secondScore.innerText;
+        let thirdScore = document.getElementById("thirdScore");
+        let thirdScoreV = thirdScore.innerText;
+        let fourthScore = document.getElementById("fourthScore");
+        let fourthScoreV = fourthScore.innerText;
+        let fifthScore = document.getElementById("fifthScore");
+        let fifthScoreV = fifthScore.innerText;
+        if (firstNameV == " ") {
+          firstName.innerText = nameV;
+          firstScore.innerText = getScoreV;
+        } else if (Number(firstScoreV) < Number(getScoreV)) {
+          fifthName.innerText = fourthNameV;
+          fifthScore.innerText = fourthScoreV;
+          fourthName.innerText = thirdNameV;
+          fourthScore.innerText = thirdScoreV;
+          thirdName.innerText = secondNameV;
+          thirdScore.innerText = secondScoreV;
+          secondName.innerText = firstNameV;
+          secondScore.innerText = firstScoreV;
+          firstName.innerText = nameV;
+          firstScore.innerText = getScoreV;
+        } else if (secondNameV == " ") {
+          secondName.innerText = nameV;
+          secondScore.innerText = getScoreV;
+        } else if (Number(secondScoreV) < Number(getScoreV)) {
+          fifthName.innerText = fourthNameV;
+          fifthScore.innerText = fourthScoreV;
+          fourthName.innerText = thirdNameV;
+          fourthScore.innerText = thirdScoreV;
+          thirdName.innerText = secondNameV;
+          thirdScore.innerText = secondScoreV;
+          secondName.innerText = nameV;
+          secondScore.innerText = getScoreV;
+        } else if (thirdNameV == " ") {
+          thirdName.innerText = nameV;
+          thirdScore.innerText = getScoreV;
+        } else if (Number(thirdScoreV) < Number(getScoreV)) {
+          fifthName.innerText = fourthNameV;
+          fifthScore.innerText = fourthScoreV;
+          fourthName.innerText = thirdNameV;
+          fourthScore.innerText = thirdScoreV;
+          thirdName.innerText = nameV;
+          thirdScore.innerText = getScoreV;
+        } else if (fourthNameV == " ") {
+          fourthName.innerText = nameV;
+          fourthScore.innerText = getScoreV;
+        } else if (Number(fourthScoreV) < Number(getScoreV)) {
+          fifthName.innerText = fourthNameV;
+          fifthScore.innerText = fourthScoreV;
+          fourthName.innerText = nameV;
+          fourthScore.innerText = getScoreV;
+        } else if (fifthNameV == " ") {
+          fifthName.innerText = nameV;
+          fifthScore.innerText = getScoreV;
+        } else if (Number(fifthScoreV) < Number(getScoreV)) {
+          fifthName.innerText = nameV;
+          fifthScore.innerText = getScoreV;
+        } else {
+          window.alert("ランク外です。");
+        }
+      
       name.oninput = inputCheck;
       getScore.oninput = inputCheck;
+      sendButton.oninput = createRank;
     </script>
   </body>
 </html>
