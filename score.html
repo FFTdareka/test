@@ -46,6 +46,21 @@
       </tr>
     </table>
     <label for="name">name</label>
-    <input type="text" id="name" required />
+    <input type="text" id="name" oninput="inputCheck()"　required />
+    <label for="getScore">getScore</label>
+    <input type="text" id="getScore" oninput="inputCheck()" required />
+    <button type="button" id="sendButton" onclick="" disabled>送信</button>
+    <script>
+      function inputCheck() {
+        let name = document.getElementById("name").value;
+        let getScore = document.getElementById("getScore").value;
+        let sendButton = docuement.getElementById("sendButton");
+        if (name && getScore) {
+          sendButton.disabled = false;
+        } else {
+          sendButton.disabled = true;
+        }
+      }
+    </script>
   </body>
 </html>
