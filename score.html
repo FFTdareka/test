@@ -15,6 +15,12 @@
       .rankNum{
         font-size: 80px;
       }
+      .pName{
+        font-size: 70px;
+      }
+      .score{
+        font-size: 70px;
+      }
     </style>
     <h1>テスト2</h1>
     <p>テスト2です。</p>
@@ -104,6 +110,8 @@
           secondScore.innerText = firstScoreV;
           firstName.innerText = nameV;
           firstScore.innerText = getScoreV;
+        } else if (Number(firstScoreV) == Number(getScoreV)) {
+          firstName.innerText = firstNameV + '、' + nameV;
         } else if (secondNameV == " ") {
           secondName.innerText = nameV;
           secondScore.innerText = getScoreV;
@@ -116,6 +124,8 @@
           thirdScore.innerText = secondScoreV;
           secondName.innerText = nameV;
           secondScore.innerText = getScoreV;
+        } else if (Number(secondScoreV) == Number(getScoreV)) {
+          secondName.innerText = secondNameV + '、' + nameV;
         } else if (thirdNameV == " ") {
           thirdName.innerText = nameV;
           thirdScore.innerText = getScoreV;
@@ -126,6 +136,8 @@
           fourthScore.innerText = thirdScoreV;
           thirdName.innerText = nameV;
           thirdScore.innerText = getScoreV;
+        } else if (Number(thirdScoreV) == Number(getScoreV)) {
+          thirdName.innerText = thirdNameV + '、' + nameV;
         } else if (fourthNameV == " ") {
           fourthName.innerText = nameV;
           fourthScore.innerText = getScoreV;
@@ -134,12 +146,16 @@
           fifthScore.innerText = fourthScoreV;
           fourthName.innerText = nameV;
           fourthScore.innerText = getScoreV;
+        } else if (Number(fourthScoreV) == Number(getScoreV)) {
+          fourthName.innerText = fourthNameV + '、' + nameV;
         } else if (fifthNameV == " ") {
           fifthName.innerText = nameV;
           fifthScore.innerText = getScoreV;
         } else if (Number(fifthScoreV) < Number(getScoreV)) {
           fifthName.innerText = nameV;
           fifthScore.innerText = getScoreV;
+        } else if (Number(fifthScoreV) == Number(getScoreV)) {
+          fifthName.innerText = fifthNameV + '、' + nameV;
         } else {
           window.alert("ランク外です。");
         }
