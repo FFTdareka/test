@@ -24,7 +24,7 @@
     </style>
     <h1>テスト2</h1>
     <p>テスト2です。</p>
-    <table id="rank" border="0">
+    <table id="rank" border="0" cellspacing="10">
       <tr>
         <td class="rankNum">第1位</td>
         <td class="pName" id="firstName"> </td>
@@ -87,73 +87,73 @@
         let fifthName = document.getElementById("fifthName");
         let fifthNameV = fifthName.innerText;
         let firstScore = document.getElementById("firstScore");
-        let firstScoreV = firstScore.innerText;
+        let firstScoreV = firstScore.innerText.replace('点', '');
         let secondScore = document.getElementById("secondScore");
-        let secondScoreV = secondScore.innerText;
+        let secondScoreV = secondScore.innerText.replace('点', '');
         let thirdScore = document.getElementById("thirdScore");
-        let thirdScoreV = thirdScore.innerText;
+        let thirdScoreV = thirdScore.innerText.replace('点', '');
         let fourthScore = document.getElementById("fourthScore");
-        let fourthScoreV = fourthScore.innerText;
+        let fourthScoreV = fourthScore.innerText.replace('点', '');
         let fifthScore = document.getElementById("fifthScore");
-        let fifthScoreV = fifthScore.innerText;
+        let fifthScoreV = fifthScore.innerText.replace('点', '');
         if (firstNameV == " ") {
           firstName.innerText = nameV;
-          firstScore.innerText = getScoreV;
+          firstScore.innerText = getScoreV + '点';
         } else if (Number(firstScoreV) < Number(getScoreV)) {
           fifthName.innerText = fourthNameV;
-          fifthScore.innerText = fourthScoreV;
+          fifthScore.innerText = fourthScoreV + '点';
           fourthName.innerText = thirdNameV;
-          fourthScore.innerText = thirdScoreV;
+          fourthScore.innerText = thirdScoreV + '点';
           thirdName.innerText = secondNameV;
-          thirdScore.innerText = secondScoreV;
+          thirdScore.innerText = secondScoreV + '点';
           secondName.innerText = firstNameV;
-          secondScore.innerText = firstScoreV;
+          secondScore.innerText = firstScoreV + '点';
           firstName.innerText = nameV;
-          firstScore.innerText = getScoreV;
+          firstScore.innerText = getScoreV + '点';
         } else if (Number(firstScoreV) == Number(getScoreV)) {
           firstName.innerText = firstNameV + '、' + nameV;
         } else if (secondNameV == " ") {
           secondName.innerText = nameV;
-          secondScore.innerText = getScoreV;
+          secondScore.innerText = getScoreV + '点';
         } else if (Number(secondScoreV) < Number(getScoreV)) {
           fifthName.innerText = fourthNameV;
-          fifthScore.innerText = fourthScoreV;
+          fifthScore.innerText = fourthScoreV + '点';
           fourthName.innerText = thirdNameV;
-          fourthScore.innerText = thirdScoreV;
+          fourthScore.innerText = thirdScoreV + '点';
           thirdName.innerText = secondNameV;
-          thirdScore.innerText = secondScoreV;
+          thirdScore.innerText = secondScoreV + '点';
           secondName.innerText = nameV;
-          secondScore.innerText = getScoreV;
+          secondScore.innerText = getScoreV + '点';
         } else if (Number(secondScoreV) == Number(getScoreV)) {
           secondName.innerText = secondNameV + '、' + nameV;
         } else if (thirdNameV == " ") {
           thirdName.innerText = nameV;
-          thirdScore.innerText = getScoreV;
+          thirdScore.innerText = getScoreV + '点';
         } else if (Number(thirdScoreV) < Number(getScoreV)) {
           fifthName.innerText = fourthNameV;
-          fifthScore.innerText = fourthScoreV;
+          fifthScore.innerText = fourthScoreV + '点';
           fourthName.innerText = thirdNameV;
-          fourthScore.innerText = thirdScoreV;
+          fourthScore.innerText = thirdScoreV + '点';
           thirdName.innerText = nameV;
-          thirdScore.innerText = getScoreV;
+          thirdScore.innerText = getScoreV + '点';
         } else if (Number(thirdScoreV) == Number(getScoreV)) {
           thirdName.innerText = thirdNameV + '、' + nameV;
         } else if (fourthNameV == " ") {
           fourthName.innerText = nameV;
-          fourthScore.innerText = getScoreV;
+          fourthScore.innerText = getScoreV + '点';
         } else if (Number(fourthScoreV) < Number(getScoreV)) {
           fifthName.innerText = fourthNameV;
-          fifthScore.innerText = fourthScoreV;
+          fifthScore.innerText = fourthScoreV + '点';
           fourthName.innerText = nameV;
-          fourthScore.innerText = getScoreV;
+          fourthScore.innerText = getScoreV + '点';
         } else if (Number(fourthScoreV) == Number(getScoreV)) {
           fourthName.innerText = fourthNameV + '、' + nameV;
         } else if (fifthNameV == " ") {
           fifthName.innerText = nameV;
-          fifthScore.innerText = getScoreV;
+          fifthScore.innerText = getScoreV + '点';
         } else if (Number(fifthScoreV) < Number(getScoreV)) {
           fifthName.innerText = nameV;
-          fifthScore.innerText = getScoreV;
+          fifthScore.innerText = getScoreV + '点';
         } else if (Number(fifthScoreV) == Number(getScoreV)) {
           fifthName.innerText = fifthNameV + '、' + nameV;
         } else {
